@@ -1,0 +1,17 @@
+meta(charset="UTF-8")
+meta(name="viewport", content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0")
+meta(name="format-detection", content="telephone=no,email=no,date=no,address=no")
+meta(name="renderer", content="webkit")
+meta(http-equiv="Cache-Control", content="no-siteapp")
+if theme.keywords
+	meta(name="keywords", content=theme.keywords)
+if theme.rss
+	link(rel="alternate", type="application/rss+xml", title="#{config.title} | #{theme.description}", href=theme.rss)
+if theme.favicon
+	link(rel="shortcut icon", type="image/x-icon", href=theme.favicon)
+//- 插入 open graph 资源
+!=open_graph()
+//- 整站样式
+!= css("css/base")
+//- 整站访问统计
+!= partial('_partial/analytics')

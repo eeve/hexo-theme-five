@@ -1,0 +1,13 @@
+extends base
+
+block site_meta
+	if title
+		title #{title} - #{config.title}
+	else
+		title #{config.title} - #{config.subtitle}
+	if theme.description
+		meta(name="description", content=theme.description)
+
+block site_body
+	!= partial('_partial/archive', { $pageTpl: 'index' })
+	!= partial('_partial/comments', { type: 'js' })

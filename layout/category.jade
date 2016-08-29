@@ -1,0 +1,7 @@
+extends base
+block site_meta
+	title #{__('categories')}:#{page.category} - #{config.title}
+	meta(name="description", content="文章#{__('categories')}:#{page.category}，此页面包含了#{page.category}#{__('categories')}下的所有文章列表 - #{config.title}")
+
+block site_body
+	!= partial('_partial/archive', { $pageTpl: 'category' })

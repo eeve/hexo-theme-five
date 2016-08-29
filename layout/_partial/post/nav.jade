@@ -1,0 +1,23 @@
+if post.prev || post.next
+	- var column = 1;
+	if post.prev && post.next
+		- column++;
+	nav#article-nav.article-nav.grid
+		if post.prev
+			a(href=url_for(post.prev.path) id="article-nav-newer" class="article-nav-link-wrap read-next-article w-1-#{column} text-center")
+				.post
+					strong.article-nav-caption= __('newer')
+					.article-nav-title
+						if post.prev.title
+							| #{post.prev.title}
+						else
+							| (no title)
+		if post.next
+			a(href=url_for(post.next.path) id="article-nav-older" class="article-nav-link-wrap read-next-article w-1-#{column} text-center")
+				.post
+					strong.article-nav-caption= __('older')
+					.article-nav-title
+						if post.next.title
+							| #{post.next.title}
+						else
+							| (no title

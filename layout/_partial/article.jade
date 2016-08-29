@@ -1,0 +1,51 @@
+//- 此模板作用于:
+//- 首页文章列表
+//- 文章详情页
+if index
+	article(class="article article-type-#{post.layout}")
+		h2.title
+			a(href=url_for(post.path))= post.title
+		.inner
+			.excerpt
+				if post.excerpt
+					!= post.excerpt
+			.article-meta
+				span.tags
+					!= partial('post/tag')
+				span.right
+					a.more-link(href=url_for(post.path))= __('excerpt_link')
+				.clearfix
+else
+	article(class="article article-type-#{post.layout} article-detail")
+		//- 文章详情页面
+		if post.title
+			h1.article-title= post.title
+			if post.meta != false
+				.article-meta
+					span 发表于&nbsp;&nbsp;#{date(post.date)}
+					if post.categories && post.categories.length > 0
+						span.line 分类于&nbsp;&nbsp;
+							!= partial('post/category')
+					if post.tags && post.tags.length > 0
+						span.tags.line
+							!= partial('post/tag')
+					span.line
+						!= partial('read')
+		.article-content
+			if post.toc
+				!= partial('post/toc')
+			!= post.content
+		.compass
+		//- license
+		if post.license == true
+			!= partial('license')
+		//- 关于作者
+		!= partial('post/author')
+		//- 联系我
+		!= partial('post/contact')
+		//- 上一篇,下一篇快速导航
+		!= partial('post/nav')
+		//- 评论
+		!= partial('comments')
+		!= partial('comments', { type: 'js' })
+

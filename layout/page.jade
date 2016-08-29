@@ -1,0 +1,13 @@
+extends base
+
+block site_meta
+	if page.type == 'tag'
+		title #{__('tags')} - #{config.title}
+		meta(name="description", content="所有的#{__('tags')}列表 - #{config.title}")
+	else if page.type == 'page' && page.title
+		title #{page.title} - #{config.title}
+	else
+		title #{config.title} - #{config.subtitle}
+
+block site_body
+	!= partial('_partial/page', { post: page, type: page.type })

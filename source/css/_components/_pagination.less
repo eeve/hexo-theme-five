@@ -1,0 +1,18 @@
+// 分页
+.site-page-nav{
+	text-align: center;
+	margin: 10px 0;
+	.page-number,.prev{
+		display: inline-block;
+		line-height: 30px;
+		margin: 0 15px 0 0;
+	}
+	.page-number{
+		width: 35px;
+		border: 1px solid @page-disabled-color;
+		&.current,&:hover{
+			border: 1px solid @page-link-color;
+			color: @page-link-color;
+		}
+	}
+}

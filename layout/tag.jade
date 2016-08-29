@@ -1,0 +1,11 @@
+//- 访问的路径类似: tags/xxx/
+//- is_tag() == true
+extends base
+
+block site_meta
+	title #{__('tags')}:#{page.tag} - #{config.title}
+	meta(name="description", content="文章#{__('tags')}:#{page.tag}，此页面包含了#{page.tag}#{__('tags')}下所有的文章列表 - #{config.title}")
+
+
+block site_body
+	!= partial('_partial/archive', { $pageTpl: 'tag' })

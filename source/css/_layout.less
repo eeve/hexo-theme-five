@@ -1,0 +1,86 @@
+.site-body{
+	position: relative;
+	z-index: 10;
+}
+
+// header
+.site-header{
+	.site-title{
+		margin: 0.3em 0;
+		font-size: 2.5em;
+	}
+	.site-subtitle{
+		margin: 0.2em 0;
+	}
+	.site-title,.site-main-nav{
+		display: inline-block;
+	}
+	nav.site-main-nav{
+		margin-top: 2.5em;
+		li {
+			margin-right: 20px;
+			float: left;
+			a{
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border-radius: 5px;
+				font-weight: 900;
+				font-size: 14px;
+				padding: 0.5em 1em;
+				text-shadow: none;
+				text-transform: uppercase;
+				-webkit-transition: all 0.25s;
+				-moz-transition: all 0.25s;
+				-o-transition: all 0.25s;
+				transition: all 0.25s;
+			}
+		}
+	}
+}
+
+.site-page{
+	margin: 0.5rem 0;
+}
+
+.site-content{
+	padding: 1.5em 1em;
+	background: @page-bg-color;
+	color: @page-color;
+	border-radius: @border-radius;
+	min-height: @page-content-min-height;
+	position: relative;
+	a{
+		color: @page-link-color;
+		&:hover{
+			color: @page-link-hover-color;
+		}
+	}
+}
+
+.site-footer{
+	font-size: 0.9em;
+	padding: 1.5rem 0;
+	p{
+		line-height: 1.3rem;
+		&.links{
+			> a {
+				margin: 0 10px;
+			}
+		}
+	}
+}
+
+//星空遮罩
+.space-star{
+	position: fixed;
+	top:0;
+	left:0;
+	right: 0;
+	bottom: 0;
+	//星空效果
+	&.star-animate{
+		animation: slide 60s linear infinite;
+		background: url(https://svdb.co/images/stars.svg) center center;
+		background-size: 240px;
+	}
+}

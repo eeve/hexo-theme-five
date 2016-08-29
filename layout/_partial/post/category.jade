@@ -1,0 +1,2 @@
+if post.categories && post.categories.length > 0
+	.article-categories!= list_categories(post.categories, { show_count: false, depth: -1, class: 'article-category' })

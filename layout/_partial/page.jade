@@ -1,0 +1,9 @@
+//- 可以根据type判断是什么自定义页面
+if type == 'tag'
+	//- tag 列表页面
+	.article-tag.tag-content
+		!= list_tags({ transform:function(tag){ return '#'+tag; }, class: 'article-tag' })
+
+else if type == 'page'
+	//- 初始化自定义页面
+	!= partial('article', { post: post, index: false })

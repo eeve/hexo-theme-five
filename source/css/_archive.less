@@ -1,0 +1,29 @@
+@item-height : 25px;
+.archive {
+	font-size: 1rem;
+	padding: 1rem;
+	.archive-title{
+		margin: 20px 0;
+	}
+	.post-item{
+		padding: 0 0 10px 50px;
+	}
+	.post-info{
+		float: left;
+    width: 125px;
+    color: #7f8c8d;
+    height: @item-height;
+    line-height: @item-height;
+	}
+	.post-title-link{
+		display: block;
+		//font-weight: 700;
+    margin-left: 125px;
+    height: @item-height;
+    line-height: @item-height;
+    word-break: break-all;
+    &:hover{
+    	text-decoration: underline;
+    }
+	}
+}

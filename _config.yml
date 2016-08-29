@@ -1,0 +1,32 @@
+# Header
+menu:
+  Home: /
+  Archives: /archives
+  Tags: /tags
+  About: /about
+  RSS: /atom.xml
+
+rss: /atom.xml
+sitemap: /sitemap.xml
+
+name: EEVE
+keywords: eeve,eeve.me,eeve的博客
+city: Beijing「北京」
+headImage: /logo.png
+link: https://eeve.me
+description: 前端工程师，全栈开发尝试者，坐标北京。
+favicon: /favicon.ico
+
+# Contact
+weibo: http://weibo.com/sky52020
+github:	https://github.com/eeve
+zhihu:	http://www.zhihu.com/people/eeve
+douban: https://www.douban.com/people/eeve
+#twitter:	http://www.twitter.com/eeve
+
+# Analytics 统计: http://tongji.baidu.com/
+analytics: 44f47dd3c18ca7641cc9f86494b263e5
+
+# Less
+less:
+	compress: true

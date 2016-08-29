@@ -1,0 +1,11 @@
+.author
+	.author-image
+		a.img(href="javascript:;", rel="#{theme.name}'s Picture", style="background-image: url('#{theme.headImage}')")
+			span.hide #{theme.name}'s Picture
+	.author-detail
+		a(href="javascript:;")= theme.name
+		p= theme.description
+		.author-meta
+			span.author-location= theme.city
+			span.author-link
+				a(href=theme.link)= theme.link

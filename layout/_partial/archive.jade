@@ -1,0 +1,35 @@
+if $pageTpl == 'index'
+	//- index page
+	each post in page.posts.toArray()
+		!= partial('article', { post: post, index: true })
+
+
+else if $pageTpl == 'archive'
+	//- archive page
+	- var groups = {};
+	each post in page.posts.toArray()
+		- var posts = groups[post.date.year()];
+		- if(posts==undefined){
+			- posts = [];
+		- }
+		- posts.push(post);
+		- groups[post.date.year()] = posts;
+	!= partial('archive-posts', { groups: groups })
+
+
+else if $pageTpl == 'tag'
+	//- tag page
+	- var groups = {};
+	- groups['#'+page.tag] = page.posts.toArray();
+	!= partial('archive-posts', { groups: groups })
+
+
+else if $pageTpl == 'category'
+	//- category page
+	- var groups = {};
+	- groups[page.category] = page.posts.toArray();
+	!= partial('archive-posts', { groups: groups })
+
+//- 能分页则分页
+if (page.total > 1)
+	nav.site-page-nav!= paginator({ prev_text: "&laquo; "+__('prev'), next_text: __('next')+" &raquo;" })

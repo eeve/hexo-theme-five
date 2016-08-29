@@ -1,0 +1,10 @@
+//- 访问的路径: archives/
+//- is_archive() == true
+extends base
+
+block site_meta
+	title #{__('archive_a')} - #{config.title}
+	meta(name="description", content="文章#{__('archive_a')}页面 - #{config.title}")
+
+block site_body
+	!= partial('_partial/archive', { $pageTpl: 'archive' })

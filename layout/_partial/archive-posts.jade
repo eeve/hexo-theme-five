@@ -1,0 +1,7 @@
+.archive
+	each posts,title in groups
+		h2.archive-title #{title}
+		each post in posts
+			.post-item
+				.post-info= date(post.date)
+				a.post-title-link(href=url_for(post.path)) #{post.title}

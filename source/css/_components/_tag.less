@@ -1,0 +1,46 @@
+// tag
+.article-tag{
+	font-size: 0.6rem;
+	display: inline-block;
+	vertical-align: middle;
+	.article-tag-list{
+		display: inline-block;
+		.article-tag-list-item{
+			float: left;
+			height: 16px;
+			line-height: 16px;
+			background: @tag-bg-color;
+			padding: 0 5px 0px 5px;
+			margin: 2px 5px 2px 0;
+			.article-tag-list-count{
+				padding:0 5px;
+				margin-left: 5px;
+				color: @tag-count-color;
+				background: @tag-count-bg-color;
+			}
+			.article-tag-list-link{
+				color: @tag-text-color;
+			}
+			&:hover{
+				color: @tag-hover-text-color;
+				background: @tag-hover-bg-color;
+				.article-tag-list-link{
+					color: @tag-hover-text-color;
+				}
+				.article-tag-list-count{
+					color: @tag-hover-count-color;
+					background: @tag-hover-count-bg-color;
+				}
+			}
+		}
+	}
+}
+
+// tags页面
+.article-type-tags{
+	font-size: 1rem;
+	.article-tag-list-item{
+		height: 20px;
+		line-height:20px;
+	}
+}

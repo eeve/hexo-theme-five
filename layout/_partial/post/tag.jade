@@ -1,0 +1,4 @@
+if post.tags && post.tags.length > 0
+	span.fa-stack.fa-lg
+		i.fa.fa-tags.fa-stack-1x
+	.article-tag.tagcloud!= list_tags(post.tags, { show_count: false, class: 'article-tag', transform: function(tag){ return "#"+tag } })

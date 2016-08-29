@@ -1,0 +1,7 @@
+//- 开启评论 type: js --> 加载评论js脚本
+if type == 'js'
+	!= partial('share/duoshuo_js')
+else
+	if post.comment != false
+		#comment
+			!= partial('share/duoshuo')

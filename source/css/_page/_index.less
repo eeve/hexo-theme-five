@@ -1,0 +1,67 @@
+@content-margin: 30px;
+
+article{
+	font-size: 1rem;
+	margin: 1rem @content-margin;
+	// 文章标题
+	h2.title {
+		font-size: 1.3rem;
+		padding: 0.5rem 0;
+	}
+	.inner{
+		padding: 0.3rem;
+	}
+	// 文章简介
+	.excerpt{
+		line-height: 1.1em;
+		p{
+			margin: 0;
+			font-size: 0.8em;
+		}
+	}
+	// tag和更多按钮
+	.article-meta{
+		font-size: 0.7rem;
+		margin: 15px 0 5px 0;
+    border-bottom: 1px solid @border-color;
+		position: relative;
+		padding-bottom: 10px;
+		// height: 30px;
+		//color: lighten(@page-color, 30%);
+		> span {
+			display: inline-block;
+			height: 30px;
+			line-height: 30px;
+		}
+		.right{
+			position: absolute;
+			right: 0;
+			height: 100%;
+			top: 0;
+			bottom: 0;
+		}
+		.more-link{
+		}
+		.tags{
+			line-height: 0; // 去掉30px的line-height
+		}
+		// icon
+		.fa-stack{
+			color: darken(#ccc, 20%);
+		}
+		// 重设tag的样式
+		.article-tag{
+			.article-tag-list-item{
+				background: #ccc;
+			}
+		}
+		.line{
+			&:before{
+				content: '|';
+				vertical-align: baseline;
+				padding: 0 10px 0 15px;
+				display: inline-block;
+			}
+		}
+	}
+}

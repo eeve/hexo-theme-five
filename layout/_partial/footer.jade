@@ -1,0 +1,10 @@
+footer.site-footer
+	.grid.text-center
+		p © 2016 Hexo Theme five by eeve
+		p.links
+			a(href="/sitemap.xml", rel="站点地图", target="_blank") 站点地图
+			if theme.analytics
+				a(href="http://tongji.baidu.com/web/welcome/ico?s=#{theme.analytics}", rel="流量统计", target="_blank") 流量统计
+		block site_footer
+//- 整站js
+!= js("js/app")

@@ -1,0 +1,33 @@
+//- 分享
+#article-contact.article-contact
+	ul.list-inline.text-center
+		if theme.weibo
+			li
+				a(target="_blank" href=theme.weibo)
+					span.fa-stack.fa-lg
+						i.fa.fa-circle.fa-stack-2x
+						i.fa.fa-weibo.fa-stack-1x.fa-inverse
+		if theme.github
+			li
+				a(target="_blank" href=theme.github)
+					span.fa-stack.fa-lg
+						i.fa.fa-circle.fa-stack-2x
+						i.fa.fa-github.fa-stack-1x.fa-inverse
+		if theme.zhihu
+			li
+				a(target="_blank" href=theme.zhihu)
+					span.fa-stack.fa-lg
+						i.fa.fa-circle.fa-stack-2x
+						i.fa.fa-stack-1x.fa-inverse 知
+		if theme.douban
+			li
+				a(target="_blank" href=theme.douban)
+					span.fa-stack.fa-lg
+						i.fa.fa-circle.fa-stack-2x
+						i.fa.fa-stack-1x.fa-inverse 豆
+		if theme.twitter
+			li
+				a(target="_blank" href=theme.twitter)
+					span.fa-stack.fa-lg
+						i.fa.fa-circle.fa-stack-2x
+						i.fa.fa-twitter.fa-stack-1x.fa-inverse

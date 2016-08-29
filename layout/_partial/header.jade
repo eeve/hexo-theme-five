@@ -1,0 +1,11 @@
+header.site-header
+	.grid
+		.w-1-3.unit
+			h1.site-title
+				a(href=config.root)= config.title
+			p.site-subtitle= config.subtitle
+		nav.w-2-3.unit.site-main-nav
+			ul
+				each link,title in theme.menu
+					li
+						a(href=link)= title

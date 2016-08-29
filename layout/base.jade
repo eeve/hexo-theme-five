@@ -1,0 +1,17 @@
+doctype html
+html(lang="zh_CN")
+	head
+		block site_meta
+		include _partial/head
+	body
+		.site-body
+			include _partial/header
+			section.site-page
+				.site-content.grid
+					block site_body
+					#backtop.backtop
+						span.fa-stack.fa-lg
+							i.fa.fa-arrow-up.fa-stack-1x.fa-inverse
+			include  _partial/footer
+
+		.space-star.star-animate
