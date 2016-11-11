@@ -4,9 +4,8 @@
   "description": "Simple theme for Hexo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-		"watch": "webpack --progress --colors --display-error-details --watch",
-		"pro": "NODE_ENV=production webpack --p"
+		"start": "webpack --progress --colors --display-error-details --watch",
+		"build": "NODE_ENV=production webpack --p"
   },
   "keywords": [
     "five",
