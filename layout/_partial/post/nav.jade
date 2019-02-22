@@ -2,7 +2,7 @@ if post.prev || post.next
 	- var column = 1;
 	if post.prev && post.next
 		- column++;
-	nav#article-nav.article-nav.grid
+	nav#article-nav.article-nav.site-grid
 		if post.prev
 			a(href=url_for(post.prev.path) id="article-nav-newer" class="article-nav-link-wrap read-next-article w-1-#{column} text-center")
 				.post
